@@ -1,0 +1,52 @@
+/* Reset default margin and padding */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: hsl(53, 90%, 49%);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 20px;
+    color: #444;
+    margin-bottom: 30px;
+  }
+  
+  .back-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+    background-color: #0056b3;
+  }
+  

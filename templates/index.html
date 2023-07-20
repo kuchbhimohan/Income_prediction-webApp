@@ -1,0 +1,128 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Income Predictor Web App</h1>
+        <div class="graphic">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc9kBSAk_WhFRT8qjfLN3qmEZ-iSTwVvQo4g&usqp=CAU" alt="Money Icon">
+        </div>
+        <div class="form-container">
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workclass">Workclass:</label>
+                    <select name="workclass" id="workclass" required>
+                        <option value="">Select Workclass</option>
+                        <option value="Private">Private</option>
+                        <option value="Self-emp-not-inc">Self Employed (Not Incorporated)</option>
+                        <option value="Self-emp-inc">Self Employed (Incorporated)</option>
+                        <option value="Federal-gov">Federal Government</option>
+                        <option value="Local-gov">Local Government</option>
+                        <option value="State-gov">State Government</option>
+                        <option value="Without-pay">Without Pay</option>
+                        <option value="Never-worked">Never Worked</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fnlwgt">Final Weight:</label>
+                    <input type="number" name="fnlwgt" id="fnlwgt" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <select name="education" id="education" required>
+                        <option value="">Select Education</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="Masters">Masters</option>
+                        <option value="Doctorate">Doctorate</option>
+                        <option value="HS-grad">High School Graduate</option>
+                        <option value="Assoc-acdm">Associate's degree</option>
+                        <option value="Assoc-voc">Vocational Associate's degree</option>
+                        <option value="Some-college">Some College</option>
+                        <option value="Prof-school">Professional School</option>
+                        <option value="9th">9th Grade</option>
+                        <option value="10th">10th Grade</option>
+                        <option value="11th">11th Grade</option>
+                        <option value="12th">12th Grade</option>
+                        <option value="7th-8th">7th-8th Grade</option>
+                        <option value="5th-6th">5th-6th Grade</option>
+                        <option value="1st-4th">1st-4th Grade</option>
+                        <option value="Preschool">Preschool</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="marital-status">Marital Status:</label>
+                    <select name="marital-status" id="marital-status" required>
+                        <option value="">Select Marital Status</option>
+                        <option value="Married-civ-spouse">Married - Civilian Spouse</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Never-married">Never Married</option>
+                        <option value="Separated">Separated</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Married-spouse-absent">Married - Spouse Absent</option>
+                        <option value="Married-AF-spouse">Married - Armed Forces Spouse</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="occupation">Occupation:</label>
+                    <select name="occupation" id="occupation" required>
+                        <option value="">Select Occupation</option>
+                        <option value="Exec-managerial">Executive/Managerial</option>
+                        <option value="Prof-specialty">Professional Specialty</option>
+                        <option value="Tech-support">Technical Support</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Craft-repair">Craft/Repair</option>
+                        <option value="Transport-moving">Transport/Moving</option>
+                        <option value="Farming-fishing">Farming/Fishing</option>
+                        <option value="Machine-op-inspct">Machine Operator/Inspector</option>
+                        <option value="Adm-clerical">Administrative/Clerical</option>
+                        <option value="Protective-serv">Protective Service</option>
+                        <option value="Handlers-cleaners">Handlers/Cleaners</option>
+                        <option value="Other-service">Other Service</option>
+                        <option value="Priv-house-serv">Private House Service</option>
+                        <option value="Armed-Forces">Armed Forces</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="relationship">Relationship:</label>
+                    <select name="relationship" id="relationship" required>
+                        <option value="">Select Relationship</option>
+                        <option value="Husband">Husband</option>
+                        <option value="Wife">Wife</option>
+                        <option value="Own-child">Own Child</option>
+                        <option value="Not-in-family">Not in Family</option>
+                        <option value="Other-relative">Other Relative</option>
+                        <option value="Unmarried">Unmarried</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Sex:</label>
+                    <input type="radio" name="sex" value="Male" required>Male
+                    <input type="radio" name="sex" value="Female">Female
+                </div>
+
+                <div class="form-group">
+                    <label for="hours-per-week">Hours per Week:</label>
+                    <input type="number" name="hours-per-week" id="hours-per-week" required>
+                </div>
+
+                <button type="submit" class="predict-btn">Predict Income</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
